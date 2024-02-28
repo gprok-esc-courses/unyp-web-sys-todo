@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+
+    <form method="post" action="/add/task">
+        <input type="text" name="task" placeholder="Add new task" />
+        <button type="submit">Add</button>
+    </form>
+
+    <div>
+        {% for task in tasks %}
+            <p>{{ task[1] }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
